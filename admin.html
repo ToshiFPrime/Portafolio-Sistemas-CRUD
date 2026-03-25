@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administración CRUD</title>
+    <title>Gestor de Trabajos - Admin</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Sistema de Gestión de Mantenimiento</h1>
+        <h1>Panel de Gestión de Servicios</h1>
         <nav>
             <ul>
                 <li><a href="index.html">⬅ Volver al Portafolio</a></li>
@@ -19,40 +18,37 @@
     </header>
 
     <main>
-        <section id="panel-crud">
-            <h2>Registrar Nuevo Servicio (Actividad 2)</h2>
-            
+        <section>
+            <h2>Registrar Nueva Orden de Trabajo</h2>
             <form id="crudForm">
-                
-                <label for="crud-cliente">Cliente (Texto):</label>
-                <input type="text" id="crud-cliente" placeholder="Nombre del cliente o proyecto">
+                <label>Cliente (Texto):</label>
+                <input type="text" id="crud-cliente" placeholder="Nombre del cliente">
 
-                <label for="crud-costo">Costo del Servicio $ (Numérico):</label>
-                <input type="number" id="crud-costo" min="0" step="1" placeholder="Ej. 150">
+                <label>Presupuesto $ (Numérico):</label>
+                <input type="number" id="crud-costo" placeholder="0.00">
 
-                <label for="crud-fecha">Fecha de Ingreso (Fecha):</label>
+                <label>Fecha de Entrega (Fecha):</label>
                 <input type="date" id="crud-fecha">
 
-                <label for="crud-servicio">Categoría (Selección):</label>
+                <label>Tipo de Servicio (Selección):</label>
                 <select id="crud-servicio">
-                    <option value="">-- Selecciona el servicio --</option>
-                    <option value="Armado / Mantenimiento PC">Armado / Mantenimiento PC</option>
-                    <option value="Reparación de Mandos/Periféricos">Reparación de Mandos/Periféricos</option>
-                    <option value="Configuración Router">Configuración Router / Redes</option>
-                    <option value="Scripting Python">Desarrollo / Scripting Python</option>
+                    <option value="">-- Seleccione --</option>
+                    <option value="Mantenimiento">Mantenimiento</option>
+                    <option value="Redes">Redes</option>
+                    <option value="Software">Software</option>
                 </select>
 
                 <div class="checkbox-container">
                     <input type="checkbox" id="crud-urgente">
-                    <label for="crud-urgente" style="margin-top:0;">Marcar como Urgente (Checkbox)</label>
+                    <label>¿Es pedido Urgente? (Checkbox)</label>
                 </div>
 
-                <p id="error-crud" class="error-texto">⚠️ Error: Debes llenar todos los datos de texto, número, fecha y selección.</p>
-                <button type="submit" id="btn-guardar-crud">Guardar Registro (Create)</button>
+                <p id="error-crud" class="error-texto">⚠️ Error: Todos los campos son obligatorios para el registro.</p>
+                <button type="submit">Guardar Registro en Tabla</button>
             </form>
 
-            <h3 style="margin-top: 30px;">Base de Datos - Registros Activos (Read)</h3>
-            <table id="dataTable">
+            <h3>Lista de Trabajos Activos</h3>
+            <table>
                 <thead>
                     <tr>
                         <th>Cliente</th>
@@ -60,15 +56,13 @@
                         <th>Fecha</th>
                         <th>Servicio</th>
                         <th>Urgente</th>
-                        <th>Acción (Delete)</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
-                <tbody id="tableBody">
-                    </tbody>
+                <tbody id="tableBody"></tbody>
             </table>
         </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
