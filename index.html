@@ -7,77 +7,64 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header class="header-fijo">
+    <header>
         <h1>Ivan Toshiaky Justiniano Ibañez</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="admin.html" class="btn-login">Acceso Admin 🔒</a></li>
+                <li><a href="admin.html" class="btn-gestion">Gestión de Trabajos ⚙️</a></li>
             </ul>
         </nav>
         <button id="toggle-mode">Activar Modo Oscuro</button>
     </header>
 
     <main>
-        <section id="inicio" class="seccion-pantalla">
-            <div class="contenido-centrado">
-                <h2>Sobre Mí</h2>
-                <p>¡Hola! Soy estudiante de <strong>Ingeniería en Sistemas</strong>. Me apasiona profundizar en la arquitectura de la tecnología, entender cómo interactúan los sistemas desde su núcleo y aplicar ingeniería inversa para optimizar su rendimiento y estabilidad.</p>
-                <p>Mi enfoque se basa en ofrecer soluciones integrales, desde el hardware físico y la infraestructura de red, hasta la depuración de código y el análisis de datos.</p>
-            </div>
+        <section id="inicio">
+            <h2>Sobre Mí</h2>
+            <p>Soy estudiante de <strong>Ingeniería en Sistemas</strong> cursando el quinto semestre. Mi enfoque profesional se centra en la arquitectura de hardware y la optimización de sistemas críticos. Poseo una sólida base en resolución de problemas complejos, desde la capa física de red hasta la implementación de lógica de software para automatización.</p>
         </section>
 
-        <section id="servicios" class="seccion-pantalla">
-            <h2>Especialidades y Servicios</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Soluciones técnicas eficientes, documentadas y escalables.</p>
-            
+        <section id="servicios">
+            <h2>Especialidades Técnicas</h2>
             <div class="grid-servicios">
                 <article class="tarjeta-servicio">
-                    <h3>🛠️ Ensamblaje y Diagnóstico de Hardware</h3>
-                    <p>Mantenimiento preventivo y correctivo de equipos informáticos. Diagnóstico profundo de fallos (ej. placas base que no dan video o fuentes de poder defectuosas). Además, ofrezco reparación y calibración de periféricos de alta precisión, como limpieza de potenciómetros y cambio de joysticks en mandos de PS5 (DualSense) para eliminar el *stick drift*.</p>
+                    <h3>🛠️ Hardware y Periféricos</h3>
+                    <p>Realizo diagnósticos avanzados a nivel de componentes. Especialista en mantenimiento preventivo y correctivo. Incluyo servicios de alta precisión como la reparación de mandos de consolas (reemplazo de joysticks para eliminar Stick Drift) y limpieza ultrasónica de componentes para extender la vida útil del hardware bajo estrés térmico.</p>
                 </article>
 
                 <article class="tarjeta-servicio">
-                    <h3>🌐 Infraestructura de Redes y Routing</h3>
-                    <p>Diseño y simulación de topologías de red complejas utilizando Cisco Packet Tracer. Configuración de routers, switches, asignación de subredes e implementación de protocolos de enrutamiento. Solución a cuellos de botella en redes LAN para garantizar la integridad de los paquetes y la máxima disponibilidad operativa.</p>
+                    <h3>🌐 Infraestructura de Redes</h3>
+                    <p>Diseño, implementación y administración de redes LAN/WLAN. Configuración de protocolos de enrutamiento y segmentación de red mediante VLANs. Utilizo herramientas de simulación como Cisco Packet Tracer para validar topologías antes de su despliegue físico, garantizando la seguridad y eficiencia en la transmisión de paquetes.</p>
                 </article>
 
                 <article class="tarjeta-servicio">
-                    <h3>🎮 Optimización Gaming y Latencia</h3>
-                    <p>Reducción drástica de latencia (ping) y pérdida de paquetes para entornos competitivos en tiempo real, como Overwatch. Configuración de servidores personalizados y empaquetado de modpacks orientados al máximo rendimiento en Minecraft, gestionando la asignación de memoria y la compatibilidad entre mods y librerías base.</p>
+                    <h3>🎮 Optimización y Gaming</h3>
+                    <p>Especialista en "Low Latency Gaming". Configuración de sistemas operativos para minimizar procesos en segundo plano y optimizar el frame-time. Gestión de servidores dedicados para plataformas como Minecraft, aplicando mods de optimización de memoria (Forge/Fabric) para asegurar estabilidad en entornos multijugador masivos.</p>
                 </article>
 
                 <article class="tarjeta-servicio">
-                    <h3>💻 Desarrollo en Python y Análisis de Datos</h3>
-                    <p>Automatización de procesos y scripting en Python. Capacidad para estructurar, depurar y procesar grandes volúmenes de datos utilizando librerías como Pandas, así como la visualización técnica de la información mediante Matplotlib. Código limpio, comentado y orientado a la eficiencia algorítmica.</p>
+                    <h3>💻 Desarrollo y Scripting</h3>
+                    <p>Automatización de tareas repetitivas mediante el lenguaje Python. Desarrollo de scripts para el procesamiento de archivos, análisis de datos con librerías especializadas y creación de pequeñas herramientas de escritorio que optimizan el flujo de trabajo técnico diario.</p>
                 </article>
             </div>
         </section>
 
-        <section id="contacto" class="seccion-pantalla">
-            <div class="contenido-centrado">
-                <h2>Contacto</h2>
-                <p>¿Requiere asistencia técnica, armado de equipos o desarrollo a medida? Póngase en contacto:</p>
-                <form id="contactForm">
-                    <label for="nombre">Nombre o Empresa:</label>
-                    <input type="text" id="nombre" placeholder="Ingrese su nombre completo">
-
-                    <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" placeholder="correo@dominio.com">
-
-                    <label for="mensaje">Detalles del Requerimiento:</label>
-                    <textarea id="mensaje" rows="5" placeholder="Describa el problema o proyecto con la mayor cantidad de detalles técnicos posible..."></textarea>
-                    
-                    <button type="submit" id="btn-enviar-contacto">Enviar Solicitud</button>
-                </form>
-                <p id="error-contacto" class="error-texto">⚠️ Error de validación: Se requieren todos los campos para procesar la solicitud.</p>
-            </div>
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+            <form id="contactForm">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" placeholder="correo@ejemplo.com">
+                <label for="mensaje">Consulta Técnica:</label>
+                <textarea id="mensaje" rows="4" placeholder="Describa su requerimiento..."></textarea>
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+            <p id="error-contacto" class="error-texto">⚠️ Por favor, llene todos los campos del contacto.</p>
         </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
