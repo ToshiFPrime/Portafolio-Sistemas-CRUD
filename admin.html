@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración CRUD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gestión de Mantenimiento</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">⬅ Volver al Portafolio</a></li>
+            </ul>
+        </nav>
+        <button id="toggle-mode">Activar Modo Oscuro</button>
+    </header>
+
+    <main>
+        <section id="panel-crud">
+            <h2>Registrar Nuevo Servicio (Actividad 2)</h2>
+            
+            <form id="crudForm">
+                
+                <label for="crud-cliente">Cliente (Texto):</label>
+                <input type="text" id="crud-cliente" placeholder="Nombre del cliente o proyecto">
+
+                <label for="crud-costo">Costo del Servicio $ (Numérico):</label>
+                <input type="number" id="crud-costo" min="0" step="1" placeholder="Ej. 150">
+
+                <label for="crud-fecha">Fecha de Ingreso (Fecha):</label>
+                <input type="date" id="crud-fecha">
+
+                <label for="crud-servicio">Categoría (Selección):</label>
+                <select id="crud-servicio">
+                    <option value="">-- Selecciona el servicio --</option>
+                    <option value="Armado / Mantenimiento PC">Armado / Mantenimiento PC</option>
+                    <option value="Reparación de Mandos/Periféricos">Reparación de Mandos/Periféricos</option>
+                    <option value="Configuración Router">Configuración Router / Redes</option>
+                    <option value="Scripting Python">Desarrollo / Scripting Python</option>
+                </select>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="crud-urgente">
+                    <label for="crud-urgente" style="margin-top:0;">Marcar como Urgente (Checkbox)</label>
+                </div>
+
+                <p id="error-crud" class="error-texto">⚠️ Error: Debes llenar todos los datos de texto, número, fecha y selección.</p>
+                <button type="submit" id="btn-guardar-crud">Guardar Registro (Create)</button>
+            </form>
+
+            <h3 style="margin-top: 30px;">Base de Datos - Registros Activos (Read)</h3>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Costo</th>
+                        <th>Fecha</th>
+                        <th>Servicio</th>
+                        <th>Urgente</th>
+                        <th>Acción (Delete)</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
